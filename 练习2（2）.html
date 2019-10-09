@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加学生</title>
+<style type='text/css'>
+body{background-color:green;}
+</style>
+</head>
+<body>
+<h2 align='center'>添加学生</h2>
+<form name='addform' method='post' action='Addstu1'>
+学号：<input type='text' id='Stuid' name='Stuid'/><br/><br/>
+姓名：<input type='text' id='Stuname' name='Stuname'/><br/><br/>
+班级：<input type='text' id='Stuclass' name='Stuclass'/><br/><br/>
+年龄：<input type='text' id='Stuage' name='Stuage'/><br/><br/>
+入学成绩：<input type='text' id='Stuadsc' name='Stuadsc'/><br/><br/>
+备注：<input type='text' id='Remark' name='Remark'/><br/><br/>
+<input type='button' id='Text' value='检查' onclick='text()'/>
+<input type='reset' name='Re' value='清空'/>
+<input type='submit' id='Sub' style='display:none' value='提交'/>
+</form>
+<script type="text/javascript">
+function text(){
+	var Stuid=document.getElementById("Stuid").value;
+	var Stuname=document.getElementById('Stuname').value;
+	var Stuclass=document.getElementById('Stuclass').value;
+	var Stuage=document.getElementById('Stuage').value;
+	var Stuadsc=document.getElementById('Stuadsc').value;
+	if(""==Stuid){
+		alert("学号为空!");
+	}
+	else if(Stuname==""){
+		alert('姓名为空！');
+	}
+	else if(Stuclass==""){
+		alert('班级为空！');
+	}
+	else if(Stuage==""){
+		alert('年龄为空！');
+	}
+	else if(Stuadsc==""){
+		alert('入学成绩为空！');
+	}
+	else{
+		document.getElementById("Sub").style.display="inline";
+	}
+}
+</script>
+</body>
+</html>
